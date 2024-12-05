@@ -3,16 +3,16 @@ package org.example.quizifyai.model;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 public class Respond {
-    private String text;
-    private String timestamp;
-
-    // Constructor
-    public Respond(String text, String timestamp) {
-        this.text = text;
-        this.timestamp = timestamp;
-    }
+    private String id;
+    private String object;
+    private long created;
+    private String model;
+    private List<Choice> choices;
+    private Usage usage;
 
 }
