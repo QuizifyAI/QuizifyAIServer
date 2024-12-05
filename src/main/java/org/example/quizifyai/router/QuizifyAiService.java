@@ -1,6 +1,6 @@
 package org.example.quizifyai.router;
 
-import org.example.quizifyai.Respond;
+import org.example.quizifyai.model.Respond;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
@@ -14,8 +14,8 @@ public class QuizifyAiService {
     }
 
 
-    public Mono<Respond> greetings(String text) {
-        return this.webClient.get().uri("/api/responses",text)
+    public Mono<Respond> greetings() {
+        return this.webClient.get().uri("/api/responses")
                 .retrieve()
                 .bodyToMono(Respond.class);
 
