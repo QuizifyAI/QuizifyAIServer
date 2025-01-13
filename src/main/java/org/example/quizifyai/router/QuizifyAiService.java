@@ -15,7 +15,7 @@ public class QuizifyAiService {
 
 
     public Mono<Respond> greetings() {
-        return this.webClient.get().uri("/api/responses")
+        return this.webClient.get().uri("/api/responses hello")
                 .retrieve()
                 .bodyToMono(Respond.class);
 

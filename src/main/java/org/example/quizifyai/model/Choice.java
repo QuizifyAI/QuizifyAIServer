@@ -1,6 +1,7 @@
 package org.example.quizifyai.model;
 
 public class Choice {
-    private String role;
-    private String content;
+    private int index;
+    private Message message;
+    private String finishReason;
 }
