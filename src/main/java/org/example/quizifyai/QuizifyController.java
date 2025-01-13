@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -37,7 +36,7 @@ public class QuizifyController {
     }
 
     @PostMapping("/api/question/{text}")
-    public Respond getResponse(@PathVariable("text") String text) {
+    public Respond getResponse(@PathVariable("text") List<Respond> respond) {
         return quizifyAiService.greetings().block();
     }
 
